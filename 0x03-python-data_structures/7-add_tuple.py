@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
     # Extract elements from the tuples, using 0 if a tuple is smaller than 2
     a = tuple_a + (0, 0)
