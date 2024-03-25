@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-# this function adds two numbers
+    # this imported function adds two numbers
     from add_0 import add
 
     a = 1
