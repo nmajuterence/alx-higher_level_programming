@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <lists.h>
 
 /* Definition for singly-linked list. */
 typedef struct listint_s {
