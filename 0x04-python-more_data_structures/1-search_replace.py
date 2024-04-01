@@ -6,7 +6,7 @@ by another in a new list."""
 
 def search_replace(my_list, search, replace):
     newList = list(my_list)
-    for i in range(len(newList)):
-        if newList[i] == search:
-            newList[i] = replace
+    for x in range(len(newList)):
+        if newList[x] == search:
+            newList[x] = replace
     return newList
