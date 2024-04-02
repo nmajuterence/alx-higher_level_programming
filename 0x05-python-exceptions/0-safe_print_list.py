@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    itemsnum = 0
+    number = 0
     try:
         for i in range(x):
-            print("{}".format(my_list[i]), end="")
-            itemnum += 1
+            print(my_list[i], end="")
+            number += 1
     except IndexError:
         pass
-    print()
-    return itemsnum
+    print("")
+    return number
