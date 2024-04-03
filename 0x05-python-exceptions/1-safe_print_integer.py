@@ -5,9 +5,8 @@ integer with "{:d}".format()."""
 
 def safe_print_integer(value):
     try:
-            #value = int(value)
-            print("{:d}".format(value))
-            return True
+        print("{:d}".format(value))
+        return True
     except (ValueError, TypeError):
-            print(value)
-            return False
+        return False
+
