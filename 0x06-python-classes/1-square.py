@@ -1,8 +1,15 @@
 #!/usr/bin/python3
-"""Square module."""
+
+"""Def a class Square."""
 
 
 class Square:
+    """Rep a square."""
 
     def __init__(self, size):
-        self.sizeofsquare = size
+        """Initialize a new Square.
+
+        Args:
+            size (int): The size oa square.
+        """
+        self.__size = size
