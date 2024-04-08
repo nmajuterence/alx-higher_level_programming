@@ -1,24 +1,41 @@
 import sys
 
-def factorize(number):
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+def factorize(n):
     factors = []
-    for i in range(2, int(number**0.5) + 1):
-        if number % i == 0:
-            factors.append((i, number // i))
+    for i in range(2, n//2):
+        if is_prime(i) and n % i == 0:
+            factors.append(i)
+            factors.append(n // i)
+            break
     return factors
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: factors <file>")
+        print("Usage: python rsa_factoring_challenge.py <file>")
         return
 
     input_file = sys.argv[1]
     with open(input_file, 'r') as file:
-        for line in file:
-            number = int(line.strip())
-            factor_pairs = factorize(number)
-            for pair in factor_pairs:
-                print(f"{number}={pair[0]}*{pair[1]}")
+        number = int(file.read().strip())
+        factors = factorize(number)
+        if factors:
+            print(f"The prime factors of {number} are: {factors[0]} and {factors[1]}")
+        else:
+            print(f"Unable to factorize {number} within the given time limit.")
 
 if __name__ == "__main__":
     main()
