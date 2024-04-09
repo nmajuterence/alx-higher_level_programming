@@ -9,8 +9,10 @@ class Rectangle:
         """Initialize the Rectangle instance.
 
         Args:
-            width (int, optional): The width of the rectangle. Defaults to 0.
-            height (int, optional): The height of the rectangle. Defaults to 0.
+            width (int, optional): The width of
+            the rectangle. Defaults to 0.
+            height (int, optional): The height
+            of the rectangle. Defaults to 0.
 
         Raises:
             TypeError: If width or height is not an integer.
@@ -43,7 +45,8 @@ class Rectangle:
 
     @property
     def height(self):
-        """Getter method to retrieve the height of the rectangle."""
+        """Getter method to retrieve the
+        height of the rectangle."""
         return self.__height
 
     @height.setter
